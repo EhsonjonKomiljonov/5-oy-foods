@@ -295,7 +295,7 @@ export const MostOrderedTop = styled.div`
   border-radius: 8px;
   padding: 15px;
   background-color: #1f1d2b;
-  margin-top: 24px;
+  margin-top: 15px;
 `;
 
 export const MostOrderedBottom = styled.div`
