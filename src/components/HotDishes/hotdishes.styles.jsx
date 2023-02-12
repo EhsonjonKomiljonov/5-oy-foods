@@ -11,6 +11,7 @@ export const HotDishesBoxInner = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 20px;
 `;
 
 export const HotDishesTitle = styled.h2`
@@ -51,12 +52,12 @@ export const HotDishesList = styled.ul`
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  height: 542px;
+  height: 522px;
   overflow: auto;
   padding-top: 68px;
 
   &::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px #0000004c;
+    box-shadow: inset 0 0 6px #0000004c;
     background-color: #1f1d2b;
   }
 
@@ -66,7 +67,7 @@ export const HotDishesList = styled.ul`
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #EA7C69;
+    background-color: #ea7c69;
     border-radius: 5px;
   }
 `;
