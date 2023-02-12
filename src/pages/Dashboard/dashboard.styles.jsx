@@ -23,7 +23,7 @@ export const DashboardRight = styled.div`
 export const DashboardLeftTop = styled.div`
   padding-bottom: 24px;
   border-bottom: 1px solid #393c49;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 `;
 
 export const DashboardTitle = styled.h2`
@@ -106,7 +106,7 @@ export const OrderBox = styled.div`
   background-color: #1f1d2b;
   border-radius: 8px;
   margin-top: 24px;
-  height: 480px;
+  height: 460px;
   padding: 24px 16px 0px 16px;
 `;
 
@@ -292,20 +292,18 @@ export const MostOrdered = styled.div`
 
 export const MostOrderedTop = styled.div`
   width: 372px;
-  padding: 24px;
   border-radius: 8px;
-  padding: 24px;
+  padding: 15px;
   background-color: #1f1d2b;
   margin-top: 24px;
 `;
 
 export const MostOrderedBottom = styled.div`
   width: 372px;
-  padding: 24px;
   border-radius: 8px;
-  padding: 24px;
+  padding: 15px;
   background-color: #1f1d2b;
-  margin-top: 24px;
+  margin-top: 15px;
 `;
 
 export const MostOrderedTitleBox = styled.div`
@@ -374,8 +372,8 @@ export const MostOrderedItem = styled.li`
       width: 56px;
       height: 56px;
     }
-    margin-bottom: 41px;
-    margin-top: 41px;
+    margin-bottom: 28px;
+    margin-top: 28px;
   }
 
   &:nth-child(3) {
