@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import ArrowDown from '../../assets/images/arrow-down.svg';
+import LoadingFood from '../../assets/images/loading-food.svg';
 
 export const HotDishesBox = styled.div`
   margin-top: 24px;
@@ -49,11 +50,34 @@ export const HotDishesList = styled.ul`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  height: 542px;
+  overflow: auto;
   padding-top: 68px;
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #0000004c;
+    background-color: #1f1d2b;
+  }
+
+  &::-webkit-scrollbar {
+    width: 3px;
+    background-color: #1f1d2b;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #EA7C69;
+    border-radius: 5px;
+  }
 `;
 
 export const HotDishesLoadingStyle = styled.h2`
-  font-size: 40px;
-  text-align: center;
-  color: #ea7c69;
+  position: absolute;
+  top: calc(50% - 300px);
+  right: calc(50% - 400px);
+  bottom: 0;
+  left: 0;
+  background-image: url(${LoadingFood});
+  background-position: center;
+  background-repeat: no-repeat;
 `;

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import {
   HotDishesArrowSpan,
   HotDishesBox,
@@ -11,9 +11,17 @@ import {
 } from './hotdishes.styles';
 import { FoodCard } from '../FoodCard/FoodCard';
 import { FoodCardDataContext } from '../../context/FoodCardDataContext';
+import axios from 'axios';
 
 export const HotDishes = () => {
   const { foodCardData, setFoodCardData } = useContext(FoodCardDataContext);
+
+  useEffect(() => {
+    axios
+      .get('http://localhost:5000/category')
+      .then((data) => setFoodCardData(data))
+      .catch((err) => console.log(err));
+  }, []);
 
   return (
     <HotDishesBox>
@@ -24,15 +32,28 @@ export const HotDishes = () => {
           <HotDishesOptions>Dine In</HotDishesOptions>
         </HotDishesSelect>
       </HotDishesBoxInner>
-      {foodCardData.length ? (
-        <HotDishesList> 
+      {/* {foodCardData.length ? (
+        <HotDishesList>
           {foodCardData.map((item) => (
             <FoodCard obj={item} />
           ))}{' '}
         </HotDishesList>
       ) : (
-        <HotDishesLoadingStyle>Loading...</HotDishesLoadingStyle>
-      )}
+        <HotDishesLoadingStyle></HotDishesLoadingStyle>
+      )} */}
+      <HotDishesList>
+        <FoodCard />
+        <FoodCard />
+        <FoodCard />
+        <FoodCard />
+        <FoodCard />
+        <FoodCard />
+        <FoodCard />
+        <FoodCard />
+        <FoodCard />
+        <FoodCard />
+        <FoodCard />
+      </HotDishesList>
     </HotDishesBox>
   );
 };

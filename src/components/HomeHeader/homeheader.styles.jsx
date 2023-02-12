@@ -79,6 +79,66 @@ export const HomeHeaderNavbarItem = styled.li`
   & + & {
     margin-left: 32px;
   }
+
+  &:nth-child(1) > a.active::before {
+    position: absolute;
+    bottom: -16px;
+    width: 40px;
+    height: 3px;
+    background-color: #ea7c69;
+    border-radius: 2px;
+    content: '';
+  }
+
+  &:nth-child(2) > a.active::before {
+    position: absolute;
+    bottom: -16px;
+    width: 40px;
+    height: 3px;
+    background-color: #ea7c69;
+    border-radius: 2px;
+    content: '';
+  }
+
+  &:nth-child(3) > a.active::before {
+    position: absolute;
+    bottom: -16px;
+    width: 20px;
+    height: 3px;
+    background-color: #ea7c69;
+    border-radius: 2px;
+    content: '';
+  }
+
+  &:nth-child(4) > a.active::before {
+    position: absolute;
+    bottom: -16px;
+    width: 15px;
+    height: 3px;
+    background-color: #ea7c69;
+    border-radius: 2px;
+    content: '';
+  }
+
+  &:nth-child(5) > a.active::before {
+    position: absolute;
+    bottom: -16px;
+    width: 40px;
+    height: 3px;
+    background-color: #ea7c69;
+    border-radius: 2px;
+    content: '';
+  }
+
+  &:nth-child(6) > a.active::before {
+    position: absolute;
+    bottom: -16px;
+    width: 35px;
+    height: 3px;
+    background-color: #ea7c69;
+    border-radius: 2px;
+    content: '';
+  }
 `;
 
 export const HomeHeaderNavbarLink = styled(NavLink)`
@@ -87,18 +147,9 @@ export const HomeHeaderNavbarLink = styled(NavLink)`
   font-size: 14px;
   line-height: 140%;
   color: #ffffff;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 
   &.active {
     color: #ea7c69;
-    &::before {
-      position: absolute;
-      bottom: -16px;
-      width: 37px;
-      height: 3px;
-      background-color: #ea7c69;
-      border-radius: 2px;
-      content: '';
-    }
   }
 `;
