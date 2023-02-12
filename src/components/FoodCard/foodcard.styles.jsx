@@ -4,8 +4,8 @@ export const HotDishesItem = styled.li`
   position: relative;
   display: inline-block;
   margin-bottom: 58px;
-  margin-right: 58px;
-  margin-left: 58px;
+  margin-right: 48px;
+  margin-left: 48px;
   padding: 114px 35px 35px;
   background-color: #1f1d2b;
   border-radius: 16px;
@@ -21,7 +21,7 @@ export const HotDishesItem = styled.li`
 export const HotDishesItemImg = styled.img`
   position: absolute;
   top: -36px;
-  right: 40px;
+  right: 20px;
   width: 132px;
   height: 132px;
   border-radius: 50%;

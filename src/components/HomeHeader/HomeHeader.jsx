@@ -1,3 +1,4 @@
+import { CategoryLinks } from '../CategoryLinks/CategoryLinks';
 import {
   HomeHeaderBox,
   HomeHeaderBoxContent,
@@ -6,11 +7,6 @@ import {
   HomeHeaderForm,
   HomeHeaderInput,
   HomeHeaderLabel,
-  HomeHeaderNavbar,
-  HomeHeaderNavbarBox,
-  HomeHeaderNavbarItem,
-  HomeHeaderNavbarLink,
-  HomeHeaderNavbarList,
   HomeHeaderTitle,
 } from './homeheader.styles';
 
@@ -31,60 +27,7 @@ export const HomeHeader = () => {
           </HomeHeaderLabel>
         </HomeHeaderForm>
       </HomeHeaderBoxInner>
-      <HomeHeaderNavbarBox>
-        <HomeHeaderNavbar>
-          <HomeHeaderNavbarList>
-            <HomeHeaderNavbarItem>
-              <HomeHeaderNavbarLink
-                className={({ isActive }) => (isActive ? 'active' : '')}
-                to="hot-dishes"
-              >
-                Hot Dishes
-              </HomeHeaderNavbarLink>
-            </HomeHeaderNavbarItem>
-            <HomeHeaderNavbarItem>
-              <HomeHeaderNavbarLink
-                className={({ isActive }) => (isActive ? 'active' : '')}
-                to="cold-dishes"
-              >
-                Cold Dishes
-              </HomeHeaderNavbarLink>
-            </HomeHeaderNavbarItem>
-            <HomeHeaderNavbarItem>
-              <HomeHeaderNavbarLink
-                className={({ isActive }) => (isActive ? 'active' : '')}
-                to="soup"
-              >
-                Soup
-              </HomeHeaderNavbarLink>
-            </HomeHeaderNavbarItem>
-            <HomeHeaderNavbarItem>
-              <HomeHeaderNavbarLink
-                className={({ isActive }) => (isActive ? 'active' : '')}
-                to="grill"
-              >
-                Grill
-              </HomeHeaderNavbarLink>
-            </HomeHeaderNavbarItem>
-            <HomeHeaderNavbarItem>
-              <HomeHeaderNavbarLink
-                className={({ isActive }) => (isActive ? 'active' : '')}
-                to="appetizer"
-              >
-                Appetizer
-              </HomeHeaderNavbarLink>
-            </HomeHeaderNavbarItem>
-            <HomeHeaderNavbarItem>
-              <HomeHeaderNavbarLink
-                className={({ isActive }) => (isActive ? 'active' : '')}
-                to="dessert"
-              >
-                Dessert
-              </HomeHeaderNavbarLink>
-            </HomeHeaderNavbarItem>
-          </HomeHeaderNavbarList>
-        </HomeHeaderNavbar>
-      </HomeHeaderNavbarBox>
+      <CategoryLinks />
     </HomeHeaderBox>
   );
 };

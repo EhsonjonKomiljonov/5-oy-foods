@@ -62,8 +62,6 @@ import InfoCircle from '../../assets/images/DashboardInfoCircle.svg';
 import { DataDashboardTotal } from '../../db/DataDashboardTotal';
 import { DataDashboardOrder } from '../../db/DataDashboardOrder';
 
-console.log(DataDashboardOrder);
-
 export const Dashboard = () => {
   return (
     <>

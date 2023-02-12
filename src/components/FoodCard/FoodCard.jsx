@@ -8,27 +8,22 @@ import {
 } from './foodcard.styles';
 
 export const FoodCard = ({ obj }) => {
+
+  const { image, bowls, price, name } = obj;
+
   return (
     <HotDishesItem>
       <HotDishesItemInner>
-        {/* <img src={obj?.img} alt={obj?.title} /> */}
-        <HotDishesItemImg src="https://picsum.photos/id/1/132/132" alt="" />
-        <HotDishesCardTitle>
-          {/* {obj?.title} */}
-          Spicy seasoned seafood noodles
-        </HotDishesCardTitle>
+        <HotDishesItemImg src={`http://localhost:5000/${image}`} alt="" />
+        <HotDishesCardTitle>{name}</HotDishesCardTitle>
         <HotDishesCardPrice>
           <i
             style={{ fontSize: '12px', marginRight: '3px' }}
             className="fa-regular fa-dollar-sign"
           ></i>
-          {/* {obj?.price} */}
-          2.29
+          {price}
         </HotDishesCardPrice>
-        <HotDishesCardHowMany>
-          {/* {obj?.how_many} */}
-          20 Bowls available
-        </HotDishesCardHowMany>
+        <HotDishesCardHowMany>{bowls} Bowls available</HotDishesCardHowMany>
       </HotDishesItemInner>
     </HotDishesItem>
   );

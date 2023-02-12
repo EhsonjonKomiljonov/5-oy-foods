@@ -1,13 +1,8 @@
 import React, { useContext, useEffect } from 'react';
 import {
-  HotDishesArrowSpan,
+  DataLoadingStyle,
   HotDishesBox,
-  HotDishesBoxInner,
-  HotDishesList,
-  HotDishesOptions,
-  HotDishesSelect,
-  HotDishesTitle,
-  HotDishesLoadingStyle,
+  FoodCardList, 
 } from './hotdishes.styles';
 import { FoodCard } from '../FoodCard/FoodCard';
 import { FoodCardDataContext } from '../../context/FoodCardDataContext';
@@ -18,42 +13,23 @@ export const HotDishes = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/category')
-      .then((data) => setFoodCardData(data))
+      .get(`http://localhost:5000/food/1`)
+      .then((data) => setFoodCardData(data.data))
       .catch((err) => console.log(err));
+    console.log(foodCardData);
   }, []);
 
   return (
     <HotDishesBox>
-      <HotDishesBoxInner>
-        <HotDishesTitle>Choose Dishes</HotDishesTitle>
-        <HotDishesArrowSpan></HotDishesArrowSpan>
-        <HotDishesSelect>
-          <HotDishesOptions>Dine In</HotDishesOptions>
-        </HotDishesSelect>
-      </HotDishesBoxInner>
-      {/* {foodCardData.length ? (
-        <HotDishesList>
+      {foodCardData.length ? (
+        <FoodCardList>
           {foodCardData.map((item) => (
             <FoodCard obj={item} />
-          ))}{' '}
-        </HotDishesList>
+          ))}
+        </FoodCardList>
       ) : (
-        <HotDishesLoadingStyle></HotDishesLoadingStyle>
-      )} */}
-      <HotDishesList>
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-      </HotDishesList>
+        <DataLoadingStyle></DataLoadingStyle>
+      )}
     </HotDishesBox>
   );
 };
