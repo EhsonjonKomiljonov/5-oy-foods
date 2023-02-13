@@ -127,4 +127,12 @@ export const OrdersFootBtn = styled.button`
   background-color: #ea7c69;
   box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.3);
   border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all .3s cubic-bezier(0.23, 1, 0.320, 1);
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid #ea7c69;
+  }
 `;

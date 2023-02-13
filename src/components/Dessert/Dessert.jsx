@@ -3,14 +3,14 @@ import { useContext, useEffect } from 'react';
 import { FoodCardDataContext } from '../../context/FoodCardDataContext';
 import { FoodCard } from '../FoodCard/FoodCard';
 import { DataLoadingStyle, FoodCardList } from '../HotDishes/hotdishes.styles';
-import { SoupBox } from './soup.styles';
+import { DessertBox } from './dessert.styles'
 
-export const Soup = () => {
+export const Dessert = () => {
   const { foodCardData, setFoodCardData } = useContext(FoodCardDataContext);
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/food/3`)
+      .get(`http://localhost:5000/food/6`)
       .then((data) => setFoodCardData(data.data))
       .catch((err) => console.log(err));
 
@@ -19,7 +19,7 @@ export const Soup = () => {
 
   return (
     <>
-      <SoupBox>
+      <DessertBox>
         {foodCardData.length ? (
           <FoodCardList>
             {foodCardData.map((item) => (
@@ -29,7 +29,7 @@ export const Soup = () => {
         ) : (
           <DataLoadingStyle></DataLoadingStyle>
         )}
-      </SoupBox>
+      </DessertBox>
     </>
   );
 };

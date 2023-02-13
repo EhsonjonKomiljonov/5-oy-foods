@@ -111,7 +111,7 @@ export const FileUploadName = styled.span`
   margin-top: 5px;
   text-align: center;
   color: #fff;
-`
+`;
 
 export const PostProductBtnsBox = styled.div`
   display: flex;
@@ -132,6 +132,12 @@ export const PostProductCancelBtn = styled.button`
   box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.4);
   border-radius: 8px;
   cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  
+  &:hover {
+    background-color: #ea7c69;
+    border: 1px solid transparent;
+  }
 `;
 
 export const PostProductAddBtn = styled.button`
@@ -145,4 +151,11 @@ export const PostProductAddBtn = styled.button`
   box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.4);
   border-radius: 8px;
   cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid #ea7c69;
+  }
 `;

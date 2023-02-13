@@ -21,7 +21,7 @@ export const HotDishesItem = styled.li`
 export const HotDishesItemImg = styled.img`
   position: absolute;
   top: -36px;
-  right: 20px;
+  right: calc(13%);
   width: 132px;
   height: 132px;
   border-radius: 50%;
