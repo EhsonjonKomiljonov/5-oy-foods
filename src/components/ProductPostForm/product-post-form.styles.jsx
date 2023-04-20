@@ -85,6 +85,7 @@ export const FileUploadLabel = styled.label`
   background-color: #2d303e;
   border: 1px dashed #ea7c69;
   border-radius: 8px;
+  cursor: pointer;
 `;
 
 export const FileUploadInput = styled.input`

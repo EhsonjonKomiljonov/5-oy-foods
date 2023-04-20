@@ -1,4 +1,7 @@
-import { useEffect, useRef } from 'react';
+import { useContext, useEffect, useRef } from 'react';
+import { ToOrder } from '../../context/ToOrderContext';
+import { Loading } from '../Loading/Loading';
+import { OrdersCard } from '../OrdersCard/OrdersCard';
 import {
   OrderActiveBtnInput,
   OrderHeaderBtnsBoxInner,
@@ -19,6 +22,8 @@ import {
 } from './orders.styles';
 
 export const Orders = () => {
+  const { foodOrder } = useContext(ToOrder);
+  4;
   return (
     <OrdersBox>
       <OredersHeader>
@@ -57,7 +62,18 @@ export const Orders = () => {
           </OrdersBodyHeaderInner>
         </OrdersBodyHeader>
       </OredersHeader>
-      <OrdersBodyList></OrdersBodyList>
+      <OrdersBodyList>
+        {foodOrder.length ? (
+          foodOrder.map((item) => <OrdersCard obj={item} />)
+        ) : (
+          <Loading
+            topPx="calc(50% - 100px)"
+            rightPx="0"
+            width="100px"
+            height="100px"
+          />
+        )}
+      </OrdersBodyList>
       <OrdersFoot>
         <OrdersFootInner>
           <OrdersFootTitle>Discount</OrdersFootTitle>

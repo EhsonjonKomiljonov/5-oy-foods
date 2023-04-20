@@ -6,15 +6,30 @@ import {
   HotDishesItemImg,
   HotDishesItemInner,
 } from './foodcard.styles';
+import { Loading } from '../Loading/Loading';
+import { useState } from 'react';
 
-export const FoodCard = ({ obj }) => {
-
-  const { image, bowls, price, name } = obj;
+export const FoodCard = ({ obj, onClick }) => {
+  const { image, bowls, price, name, id } = obj;
+  const [loading, setLoading] = useState(true);
 
   return (
-    <HotDishesItem>
+    <HotDishesItem id={id} onClick={(evt) => onClick(evt.currentTarget.id)}>
       <HotDishesItemInner>
-        <HotDishesItemImg src={`http://localhost:5000/${image}`} alt="" />
+        {loading ? (
+          <Loading
+            widthPx="150px"
+            heightPx="150px"
+            topPx="-50px"
+            rightPx="7%"
+          />
+        ) : null}
+        <HotDishesItemImg
+          className="food-img"
+          src={`http://localhost:5000/${image}`}
+          alt="."
+          onLoad={() => setLoading(false)}
+        />
         <HotDishesCardTitle>{name}</HotDishesCardTitle>
         <HotDishesCardPrice>
           <i

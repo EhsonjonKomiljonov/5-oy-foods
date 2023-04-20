@@ -2,7 +2,8 @@ import axios from 'axios';
 import { useContext, useEffect } from 'react';
 import { FoodCardDataContext } from '../../context/FoodCardDataContext';
 import { FoodCard } from '../FoodCard/FoodCard';
-import { DataLoadingStyle, FoodCardList } from '../HotDishes/hotdishes.styles';
+import { FoodCardList } from '../HotDishes/hotdishes.styles';
+import { Loading } from '../Loading/Loading';
 import { SoupBox } from './soup.styles';
 
 export const Soup = () => {
@@ -27,7 +28,12 @@ export const Soup = () => {
             ))}
           </FoodCardList>
         ) : (
-          <DataLoadingStyle></DataLoadingStyle>
+          <Loading
+            widthPx="300px"
+            heightPx="300px"
+            rightPx="calc(50% - 1px)"
+            topPx="calc(50% - 150px)"
+          ></Loading>
         )}
       </SoupBox>
     </>

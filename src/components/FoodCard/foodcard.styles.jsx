@@ -9,6 +9,7 @@ export const HotDishesItem = styled.li`
   padding: 114px 35px 35px;
   background-color: #1f1d2b;
   border-radius: 16px;
+  cursor: pointer;
 
   &:nth-child(1),
   &:nth-child(2),

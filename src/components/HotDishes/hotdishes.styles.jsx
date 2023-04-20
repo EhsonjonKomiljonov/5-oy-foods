@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import LoadingFood from '../../assets/images/loading-food.svg';
 
 export const HotDishesBox = styled.div`
   margin-top: 24px;
@@ -32,13 +31,4 @@ export const FoodCardList = styled.ul`
   }
 `;
 
-export const DataLoadingStyle = styled.h2`
-  position: absolute;
-  top: calc(50% - 300px);
-  right: calc(50% - 400px);
-  bottom: 0;
-  left: 0;
-  background-image: url(${LoadingFood});
-  background-position: center;
-  background-repeat: no-repeat;
-`;
+
