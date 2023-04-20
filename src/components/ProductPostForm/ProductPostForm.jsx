@@ -49,8 +49,6 @@ export const ProductPostForm = () => {
     setModal(false);
   };
 
-  useEffect(() => {}, []);
-
   const initialValues = {
     name: '',
     price: '',
